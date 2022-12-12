@@ -1,0 +1,34 @@
+﻿@model WebApplicationTP3.Models.Person
+@{
+	if (Model is null)
+	{
+		<h1>There is no person with that id.</h1>
+	}
+	else
+	{
+		<div class="row">
+			<div class="col-sm">
+				@Model.id
+			</div>
+			<div class="col-sm">
+				@Model.first_name
+			</div>
+			<div class="col-sm">
+				@Model.last_name
+			</div>
+			<div class=" col-sm">
+				@Model.email
+			</div>
+			<div class=" col-sm">
+				<img src="@Model.image" class="img-responsive"
+				alt="@Model.first_name @Model.last_name image">
+			</div>
+			<div class=" col-sm">
+				@Model.country
+			</div>
+			<div class=" col-sm">
+				@Model.date_birth
+			</div>
+		</div>
+	}
+}
